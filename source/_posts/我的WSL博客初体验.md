@@ -48,14 +48,13 @@ http://localhost:4000/
 `hexo new "我的WSL博客初体验"`
 
 ## 6. cloudbase部署网站
+### 6.1 安装cli
 https://console.cloud.tencent.com/
 ```
-# 安装cli
 npm install -g @cloudbase/cli --registry=https://registry.npmmirror.com
 tcb
 ```
-
+### 6.2 CI/CD流水线
 ```
-# CI/CD流水线
-1
+
 ```

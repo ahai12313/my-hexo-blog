@@ -3,39 +3,45 @@ name: Deploy Hexo
 on:
   push:
     branches:
-      - main # 或者您的博客源代码所在的分支名
+      - main
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout source
-      uses: actions/cache@v4
-      with:
-        submodules: true
+      # 1. 检出代码（包含子模块）
+      - name: Checkout source
+        uses: actions/checkout@v4
+        with:
+          submodules: true  # 如果需要子模块
 
-    - name: Setup Node.js
-      uses: actions/cache@v4
-      with:
-        node-version: 14 # 或者您选择的 Node.js 版本
+      # 2. 设置 Node.js 环境
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20  # 推荐使用最新的 LTS 版本
 
-    - name: Cache dependencies
-      uses: actions/cache@v4
-      with:
-        path: ~/.npm
-        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-        restore-keys: |
-          ${{ runner.os }}-node-
+      # 3. 缓存 node_modules 加速安装
+      - name: Cache node modules
+        uses: actions/cache@v4
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
 
-    - name: Install dependencies
-      run: npm ci
+      # 4. 安装依赖
+      - name: Install dependencies
+        run: npm ci  # 使用 ci 命令保持依赖精确
 
-    - name: Generate
-      run: npx hexo generate
+      # 5. 生成静态文件
+      - name: Generate
+        run: npx hexo generate
 
-    - name: Deploy to Tencent Cloud
-      uses: TencentCloudBase/cloudbase-action@v2
-      with:
-        secret_id: ${{ secrets.SECRET_ID }}
-        secret_key: ${{ secrets.SECRET_KEY }}
-        env_id: ${{ secrets.ENV_ID }}
+      # 6. 部署到腾讯云
+      - name: Deploy to Tencent Cloud
+        uses: TencentCloudBase/cloudbase-action@v2
+        with:
+          secret_id: ${{ secrets.SECRET_ID }}
+          secret_key: ${{ secrets.SECRET_KEY }}
+          env_id: ${{ secrets.ENV_ID }}

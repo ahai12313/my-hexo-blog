@@ -101,5 +101,5 @@ jobs:
 
 ```
 `git push`
-仓库>>setting>>secrets>>添加 SECRET_ID SECRET_KEY ENV_ID
-SECRET_ID SECRET_KEY通过用户>>账号信息>>访问密钥>>API密钥管理获取
+- 仓库>>setting>>secrets>>添加 SECRET_ID SECRET_KEY ENV_ID
+- SECRET_ID SECRET_KEY通过用户>>账号信息>>访问密钥>>API密钥管理获取

@@ -62,42 +62,42 @@ name: Deploy Hexo
 on:
   push:
     branches:
-      - main # 或者您的博客源代码所在的分支名
+      - main
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout source
-      uses: actions/checkout@v2
-      with:
-        submodules: true
+      - name: Checkout source
+        uses: actions/checkout@v4
+        with:
+          submodules: true
 
-    - name: Setup Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: 14 # 或者您选择的 Node.js 版本
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
 
-    - name: Cache dependencies
-      uses: actions/cache@v2
-      with:
-        path: ~/.npm
-        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-        restore-keys: |
-          ${{ runner.os }}-node-
+      - name: Cache dependencies
+        uses: actions/cache@v4
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
 
-    - name: Install dependencies
-      run: npm ci
+      - name: Install dependencies
+        run: npm ci
 
-    - name: Generate
-      run: npx hexo generate
+      - name: Generate
+        run: npx hexo generate
 
-    - name: Deploy to Tencent Cloud
-      uses: TencentCloudBase/github-action-cloudbase-deploy@v1
-      with:
-        secret_id: ${{ secrets.SECRET_ID }}
-        secret_key: ${{ secrets.SECRET_KEY }}
-        env_id: ${{ secrets.ENV_ID }}
+      - name: Deploy to Tencent Cloud
+        uses: TencentCloudBase/cloudbase-action@v2
+        with:
+          secretId: ${{ secrets.SECRET_ID }}   
+          secretKey: ${{ secrets.SECRET_KEY }} 
+          envId: ${{ secrets.ENV_ID }}         
 
 ```
 `git push`

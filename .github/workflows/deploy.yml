@@ -10,17 +10,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout source
-      uses: actions/checkout@v2
+      uses: actions/cache@v4
       with:
         submodules: true
 
     - name: Setup Node.js
-      uses: actions/setup-node@v2
+      uses: actions/cache@v4
       with:
         node-version: 14 # 或者您选择的 Node.js 版本
 
     - name: Cache dependencies
-      uses: actions/cache@v2
+      uses: actions/cache@v4
       with:
         path: ~/.npm
         key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
@@ -34,7 +34,7 @@ jobs:
       run: npx hexo generate
 
     - name: Deploy to Tencent Cloud
-      uses: TencentCloudBase/github-action-cloudbase-deploy@v1
+      uses: TencentCloudBase/cloudbase-action@v2
       with:
         secret_id: ${{ secrets.SECRET_ID }}
         secret_key: ${{ secrets.SECRET_KEY }}

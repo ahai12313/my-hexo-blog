@@ -44,8 +44,15 @@ http://localhost:4000/
 - Markdown All in One​​（Markdown 增强）
 - Hexo Utils​​（Hexo 辅助工具，可选）
 
-## 5. 新建文章
-`hexo new "我的WSL博客初体验"`
+## 5. hexo使用
+```
+hexo new "我的WSL博客初体验" # 创建新文章
+hexo generate # 生成静态文件
+hexo server # 启动本地服务器
+hexo deploy # 部署到远程
+hexo clean # 清除缓存和已生成文件​​ (遇到奇怪问题时先用这个)
+hexo list <type> # 列出文章、标签等
+```
 
 ## 6. cloudbase部署网站
 ### 6.1 安装cli

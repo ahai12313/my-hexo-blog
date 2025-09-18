@@ -1,7 +1,8 @@
 ---
-title: 技术博客网站搭建
+title: 01_技术博客网站搭建
 date: 2025-09-13 17:26:18
 tags:
+categories: 环境搭建
 ---
 
 - 开发平台：vscode + wsl(ubuntu)

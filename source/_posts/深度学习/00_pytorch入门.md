@@ -9,7 +9,7 @@ PyTorch 是一个强大且流行的深度学习框架，尤其以其**动态计�
 
 ### 🔧 环境配置与验证
 
-首先，你需要安装 PyTorch。推荐使用 **Anaconda** 来管理环境，这样可以避免包依赖冲突。
+首先，你需要安装PyTorch。推荐使用 **Anaconda** 来管理环境，这样可以避免包依赖冲突。
 
 1.  **安装命令**：
     访问 https://pytorch.org/get-started/locally/，根据你的操作系统、Python 版本以及是否有 CUDA 支持的 GPU，生成对应的安装命令。通常类似于：

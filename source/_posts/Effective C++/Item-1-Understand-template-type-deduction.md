@@ -4,7 +4,7 @@ date: 2025-11-15 23:56:48
 tags:
 categories: Effective C++
 ---
-# Item 1 全面总结：理解模板类型推导
+# Item 1 理解模板类型推导
 
 ## 1. 基本概念与重要性
 

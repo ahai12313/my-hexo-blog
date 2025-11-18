@@ -4,7 +4,7 @@
   <% }) %>
 <% } else { %>
   <% var last; %>
-  <% page.posts.each(function(post, i){ %>
+  <% page.posts.sort('title', 'asc').each(function(post, i){ %>
     <% var year = post.date.year(); %>
     <% if (last != year){ %>
       <% if (last != null){ %>

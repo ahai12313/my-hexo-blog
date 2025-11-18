@@ -29,3 +29,47 @@ menu:
 
 ## 启动服务器
 `hexo clean && hexo g && hexo s`
+
+根据您提供的图片信息，Hexo 博客的文章排序方式如下：
+
+## 如何自定义排序
+
+### 1. 通过 Front-Matter 控制
+在每篇文章的 Markdown 文件头部添加排序参数：
+```yaml
+---
+title: 文章标题
+date: 2025-11-18 14:00:00
+updated: 2025-11-18 15:00:00
+sticky: 100  # 置顶功能，数值越大越靠前
+---
+```
+
+### 2. 修改主题配置文件
+在主题的 `_config.yml` 中调整排序设置：
+```yaml
+# 按日期降序（默认）
+index_generator:
+  path: ''
+  per_page: 10
+  order_by: -date
+
+# 按日期升序（最旧在前）
+index_generator:
+  path: ''
+  per_page: 10
+  order_by: date
+
+# 按更新时间排序
+index_generator:
+  path: ''
+  per_page: 10
+  order_by: -updated
+```
+
+### 3. 常用排序选项
+- `-date`：按创建时间降序（默认）
+- `date`：按创建时间升序
+- `-updated`：按更新时间降序
+- `title`：按标题字母顺序
+- `-title`：按标题字母倒序

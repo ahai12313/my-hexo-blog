@@ -1,5 +1,5 @@
 ---
-title: supplement-3-std::function的开销
+title: supplement 3 std::function的开销
 date: 2025-11-18 22:20:48
 tags:
 categories: Effective C++

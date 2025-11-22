@@ -1,5 +1,5 @@
 ---
-title: supplement-9-类的基本结构与组成
+title: supplement 9 类的基本结构与组成
 date: 2025-11-20 22:11:14
 tags:
 categories: Effective C++

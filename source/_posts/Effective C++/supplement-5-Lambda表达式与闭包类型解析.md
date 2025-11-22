@@ -1,5 +1,5 @@
 ---
-title: supplement-5-Lambda表达式与闭包类型解析
+title: supplement 5 Lambda表达式与闭包类型解析
 date: 2025-11-18 22:22:45
 tags:
 categories: Effective C++

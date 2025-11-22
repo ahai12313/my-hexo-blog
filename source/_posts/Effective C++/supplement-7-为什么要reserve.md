@@ -1,5 +1,5 @@
 ---
-title: supplement-7-为什么要reserve
+title: supplement 7 为什么要reserve
 date: 2025-11-20 22:08:31
 tags:
 categories: Effective C++

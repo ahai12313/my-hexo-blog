@@ -1,5 +1,5 @@
 ---
-title: supplement-6-C++中::后非类型情况分析
+title: supplement 6 C++中::后非类型情况分析
 date: 2025-11-18 22:23:32
 tags:
 categories: Effective C++

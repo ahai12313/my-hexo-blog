@@ -1,5 +1,5 @@
 ---
-title: supplement-2-std::function
+title: supplement 2 std::function
 date: 2025-11-18 22:18:09
 tags:
 categories: Effective C++

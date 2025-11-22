@@ -1,5 +1,5 @@
 ---
-title: supplement-4-std::decay_t 类型转换规则
+title: supplement 4 std::decay_t 类型转换规则
 date: 2025-11-18 22:22:03
 tags:
 categories: Effective C++

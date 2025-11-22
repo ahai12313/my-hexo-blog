@@ -1,5 +1,5 @@
 ---
-title: supplement-8-移动操作标记noexcept原因
+title: supplement 8 移动操作标记noexcept原因
 date: 2025-11-20 22:09:30
 tags:
 categories: Effective C++

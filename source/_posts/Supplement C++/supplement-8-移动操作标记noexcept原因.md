@@ -2,7 +2,8 @@
 title: supplement 8 移动操作标记noexcept原因
 date: 2025-11-20 22:09:30
 tags:
-categories: Effective C++
+categories: Supplement C++
+priority: 7
 ---
 这是一个非常好的问题！在C++中，将移动操作标记为`noexcept`非常重要，主要有以下几个原因：
 

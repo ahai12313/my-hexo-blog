@@ -3,6 +3,7 @@ title: 'Item 12: Declare overriding functions override'
 date: 2025-11-22 18:55:49
 tags:
 categories: Effective C++
+priority: 11
 ---
 # Item 12：声明重写函数为override
 

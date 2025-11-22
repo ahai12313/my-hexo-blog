@@ -89,3 +89,13 @@ valine:
   lang: zh-cn # i18n: zh-cn/en
   placeholder: Just go go # valine comment input placeholder(like: Please leave your footprints )
   guest_info: nick,mail,link #valine comment header info
+
+archive_generator:
+  per_page: 0
+  yearly: true
+  monthly: true
+  order_by: title
+
+category_generator:
+  per_page: 10       
+  order_by: priority    

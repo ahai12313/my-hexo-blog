@@ -3,6 +3,7 @@ title: 'Item 9: Prefer alias declarations to typedefs'
 date: 2025-11-22 12:25:22
 tags:
 categories: Effective C++
+priority: 8
 ---
 # Item 9：优先使用别名声明而非typedef
 

@@ -5,6 +5,7 @@ title: >-
 date: 2025-11-20 22:04:23
 tags:
 categories: Effective C++
+priority: 5
 ---
 # Item 6：当 auto 推导出非期望类型时，使用显式类型初始化器惯用法
 

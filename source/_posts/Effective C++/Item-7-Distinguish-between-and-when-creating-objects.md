@@ -3,6 +3,7 @@ title: 'Item 7: Distinguish between () and {} when creating objects.'
 date: 2025-11-20 22:04:50
 tags:
 categories: Effective C++
+priority: 6
 ---
 # Effective Modern C++ 条款7文档：区分()和{}创建对象
 

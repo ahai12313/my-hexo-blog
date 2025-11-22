@@ -2,7 +2,8 @@
 title: supplement 5 Lambda表达式与闭包类型解析
 date: 2025-11-18 22:22:45
 tags:
-categories: Effective C++
+categories: Supplement C++
+priority: 4
 ---
 **闭包类型（Closure Type）** 是 Lambda 表达式在编译时生成的**匿名类类型**。
 

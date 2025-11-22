@@ -2,7 +2,8 @@
 title: supplement 10 vector构造的二义性
 date: 2025-11-20 22:12:36
 tags:
-categories: Effective C++
+categories: Supplement C++
+priority: 9
 ---
 
 ## 核心矛盾点

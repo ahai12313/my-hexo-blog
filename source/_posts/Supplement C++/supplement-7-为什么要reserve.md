@@ -2,7 +2,8 @@
 title: supplement 7 为什么要reserve
 date: 2025-11-20 22:08:31
 tags:
-categories: Effective C++
+categories: Supplement C++
+priority: 6
 ---
 C++ 中使用 `reserve()` 的主要原因是**性能优化**。让我详细解释为什么要使用它：
 

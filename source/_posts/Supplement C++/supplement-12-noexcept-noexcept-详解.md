@@ -2,7 +2,8 @@
 title: supplement 12 noexcept(noexcept(...))详解
 date: 2025-11-22 21:21:02
 tags:
-categories: Effective C++
+categories: Supplement C++
+priority: 11
 ---
 # `noexcept(noexcept(...))` 详解
 

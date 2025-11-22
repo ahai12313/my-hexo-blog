@@ -2,7 +2,8 @@
 title: supplement 6 C++中::后非类型情况分析
 date: 2025-11-18 22:23:32
 tags:
-categories: Effective C++
+categories: Supplement C++
+priority: 5
 ---
 这是一个很好的问题！你的直觉是对的，但这里有一个重要的细节。
 

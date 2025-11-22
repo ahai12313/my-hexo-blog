@@ -2,7 +2,8 @@
 title: supplement 2 std::function
 date: 2025-11-18 22:18:09
 tags:
-categories: Effective C++
+categories: Supplement C++
+priority: 1
 ---
 `std::function` 是 C++11 引入的一个**函数包装器模板**，它可以存储、复制和调用任何可调用对象（函数、Lambda 表达式、函数对象等）。
 

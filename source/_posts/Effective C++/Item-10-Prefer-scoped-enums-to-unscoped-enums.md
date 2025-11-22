@@ -3,6 +3,7 @@ title: 'Item 10: Prefer scoped enums to unscoped enums'
 date: 2025-11-22 13:03:12
 tags:
 categories: Effective C++
+priority: 9
 ---
 # Item 10：优先使用有作用域的枚举（scoped enums）
 

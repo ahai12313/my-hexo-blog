@@ -2,7 +2,8 @@
 title: supplement 9 类的基本结构与组成
 date: 2025-11-20 22:11:14
 tags:
-categories: Effective C++
+categories: Supplement C++
+priority: 8
 ---
 在C++中，一个完整的类通常包含以下部分。以下是类的通用形式和各部分的说明：
 

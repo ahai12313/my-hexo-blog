@@ -2,7 +2,8 @@
 title: supplement 11 虚函数机制
 date: 2025-11-22 18:59:07
 tags:
-categories: Effective C++
+categories: Supplement C++
+priority: 10
 ---
 # C++虚函数机制完全解析
 

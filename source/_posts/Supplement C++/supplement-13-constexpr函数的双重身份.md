@@ -2,7 +2,8 @@
 title: supplement 13 constexpr函数的双重身份
 date: 2025-11-22 23:48:43
 tags:
-categories: Effective C++
+categories: Supplement C++
+priority: 12
 ---
 # constexpr函数的参数机制详解
 

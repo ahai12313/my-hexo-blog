@@ -3,6 +3,7 @@ title: 'Item 13: Prefer const_iterators to iterators'
 date: 2025-11-22 18:56:41
 tags:
 categories: Effective C++
+priority: 12
 ---
 # Item 13：优先选用const_iterators而非iterators
 

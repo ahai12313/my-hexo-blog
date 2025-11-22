@@ -3,6 +3,7 @@ title: 'Item 4: Know how to view deduced types'
 date: 2025-11-17 21:55:47
 tags:
 categories: Effective C++
+priority: 3
 ---
 # Item 4 如何查看类型推导结果
 

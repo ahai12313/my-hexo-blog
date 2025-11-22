@@ -3,6 +3,7 @@ title: 'Item 1: Understand template type deduction.'
 date: 2025-11-15 23:56:48
 tags:
 categories: Effective C++
+priority: 0
 ---
 # Item 1 理解模板类型推导
 

@@ -3,6 +3,7 @@ title: 'Item 5: Prefer auto to explicit type declarations'
 date: 2025-11-18 22:14:53
 tags:
 categories: Effective C++
+priority: 4
 ---
 ## Item 5 优先选用auto，而非显式类型声明
 

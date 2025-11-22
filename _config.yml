@@ -102,3 +102,9 @@ theme: landscape
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: ''
+
+archive_generator:
+  per_page: 0
+  yearly: true
+  monthly: true 
+  order_by: priority

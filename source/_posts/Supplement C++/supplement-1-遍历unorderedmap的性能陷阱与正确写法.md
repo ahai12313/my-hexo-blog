@@ -2,7 +2,8 @@
 title: supplement 1 遍历unorderedmap的性能陷阱与正确写法
 date: 2025-11-18 22:11:57
 tags:
-categories: Effective C++
+categories: Supplement C++
+priority: 0
 ---
 这个例子展示了在遍历 `std::unordered_map` 时一个常见的**性能陷阱**和正确的写法。
 

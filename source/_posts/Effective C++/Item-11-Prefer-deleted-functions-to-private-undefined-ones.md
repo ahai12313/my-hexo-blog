@@ -3,6 +3,7 @@ title: 'Item 11: Prefer deleted functions to private undefined ones'
 date: 2025-11-22 18:54:50
 tags:
 categories: Effective C++
+priority: 10
 ---
 # Item 11：优先选用删除函数，而非私有未定义函数
 

@@ -3,6 +3,7 @@ title: 'Item 8: Prefer nullptr to 0 and NULL'
 date: 2025-11-22 12:22:48
 tags:
 categories: Effective C++
+priority: 7
 ---
 # Item 8：优先使用nullptr，而非0和NULL
 

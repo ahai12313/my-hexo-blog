@@ -3,6 +3,7 @@ title: 'Item 14: Declare functions noexcept if they won’t emit exceptions'
 date: 2025-11-22 21:13:47
 tags:
 categories: Effective C++
+priority: 13
 ---
 # Item 14：如果函数不会抛出异常，就将其声明为noexcept
 

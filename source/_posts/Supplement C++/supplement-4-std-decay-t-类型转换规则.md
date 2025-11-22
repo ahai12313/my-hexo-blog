@@ -2,7 +2,8 @@
 title: supplement 4 std::decay_t 类型转换规则
 date: 2025-11-18 22:22:03
 tags:
-categories: Effective C++
+categories: Supplement C++
+priority: 3
 ---
 `std::decay_t<F>` 是 C++14 引入的**类型特性工具**，用于对类型 `F` 进行"衰减"处理。
 

@@ -3,6 +3,7 @@ title: 'Item 3: Understand decltype'
 date: 2025-11-16 17:44:48
 tags:
 categories: Effective C++
+priority: 2
 ---
 
 ## Item 3 理解decltype

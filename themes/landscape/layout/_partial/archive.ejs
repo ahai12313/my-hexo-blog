@@ -4,7 +4,10 @@
   <% }) %>
 <% } else { %>
   <% var last; %>
-  <% page.posts.sort('title', 'asc').each(function(post, i){ %>
+  <%
+  var sortedPosts = page.posts.sort(config.archive_generator?.order_by || '-date');
+  sortedPosts.each(function(post, i){ 
+  %>
     <% var year = post.date.year(); %>
     <% if (last != year){ %>
       <% if (last != null){ %>

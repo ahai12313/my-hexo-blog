@@ -3,6 +3,7 @@ title: 'Item 2: Understand auto type deduction'
 date: 2025-11-16 15:35:55
 tags:
 categories: Effective C++
+priority: 1
 ---
 ## Item 2 理解auto类型推导
 

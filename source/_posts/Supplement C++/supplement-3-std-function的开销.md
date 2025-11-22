@@ -2,7 +2,8 @@
 title: supplement 3 std::function的开销
 date: 2025-11-18 22:20:48
 tags:
-categories: Effective C++
+categories: Supplement C++
+priority: 2
 ---
 `std::function` 的开销主要来自以下几个方面：
 

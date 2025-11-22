@@ -3,6 +3,7 @@ title: 'Item 15: Use constexpr whenever possible'
 date: 2025-11-22 21:14:26
 tags:
 categories: Effective C++
+priority: 14
 ---
 # Item 15：尽可能使用constexpr
 

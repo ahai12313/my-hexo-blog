@@ -1,5 +1,5 @@
 ---
-title: item-5-Prefer auto to explicit type declarations
+title: 'Item 5: Prefer auto to explicit type declarations'
 date: 2025-11-18 22:14:53
 tags:
 categories: Effective C++

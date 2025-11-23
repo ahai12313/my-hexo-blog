@@ -73,3 +73,7 @@ index_generator:
 - `-updated`：按更新时间降序
 - `title`：按标题字母顺序
 - `-title`：按标题字母倒序
+
+### 4. 脚手架
+scaffolds/post.md
+hexo new effective-c "我的C++文章"

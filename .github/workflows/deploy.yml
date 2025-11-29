@@ -1,41 +1,54 @@
-name: Deploy Hexo
+name: Deploy to CloudBase Static Hosting
 
 on:
   push:
+    branches:
+      - main
+  pull_request:
     branches:
       - main
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    
     steps:
-      - name: Checkout source
-        uses: actions/checkout@v4
-        with:
-          submodules: true
+    - name: Checkout code
+      uses: actions/checkout@v4
+      with:
+        submodules: true  # 如果使用了子模块（如主题），需要这个
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
 
-      - name: Cache dependencies
-        uses: actions/cache@v4
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
+    - name: Install dependencies
+      run: |
+        npm ci
+        # 确保 hexo 已安装，如果没有在 package.json 中
+        if [ ! -f node_modules/.bin/hexo ]; then
+          npm install hexo --save-dev
+        fi
 
-      - name: Install dependencies
-        run: npm ci
+    - name: Build project
+      run: |
+        npx hexo clean
+        npx hexo generate
+      env:
+        NODE_ENV: production
 
-      - name: Generate
-        run: npx hexo clean && npx hexo generate
+    - name: Verify build output
+      run: |
+        ls -la public/
+        echo "构建完成，文件数量: $(find public -type f | wc -l)"
 
-      - name: Deploy to Tencent Cloud
-        uses: TencentCloudBase/cloudbase-action@v2
-        with:
-          secretId: ${{ secrets.SECRET_ID }}   # 正确的参数名
-          secretKey: ${{ secrets.SECRET_KEY }} # 正确的参数名
-          envId: ${{ secrets.ENV_ID }}         # 正确的参数名
+    - name: Install CloudBase CLI
+      run: npm install -g @cloudbase/cli
+
+    - name: Login CloudBase CLI
+      run: tcb login --apiKeyId ${{ secrets.TCB_SECRET_ID }} --apiKey ${{ secrets.TCB_SECRET_KEY }}
+
+    - name: Deploy to CloudBase Static Hosting
+      run: tcb hosting deploy public / -e ${{ secrets.TCB_ENV_ID }}

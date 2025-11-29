@@ -77,3 +77,4 @@ index_generator:
 ### 4. 脚手架
 scaffolds/post.md
 hexo new effective-c "我的C++文章"
+tcb hosting list -e cloud1-0g2dsbxh4872e179

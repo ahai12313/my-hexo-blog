@@ -3,10 +3,10 @@ name: Deploy to CloudBase Static Hosting
 on:
   push:
     branches:
-      - main
+      - main # 主分支推送时触发
   pull_request:
     branches:
-      - main
+      - main # PR时触发（可选）
 
 jobs:
   build-and-deploy:
@@ -15,40 +15,24 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
-      with:
-        submodules: true  # 如果使用了子模块（如主题），需要这个
 
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
         node-version: '18'
-        cache: 'npm'
+        cache: 'npm' # 启用npm缓存加速构建
 
     - name: Install dependencies
-      run: |
-        npm ci
-        # 确保 hexo 已安装，如果没有在 package.json 中
-        if [ ! -f node_modules/.bin/hexo ]; then
-          npm install hexo --save-dev
-        fi
+      run: npm ci # 使用npm ci替代npm install，更适合CI环境
 
     - name: Build project
-      run: |
-        npx hexo clean
-        npx hexo generate
-      env:
-        NODE_ENV: production
-
-    - name: Verify build output
-      run: |
-        ls -la public/
-        echo "构建完成，文件数量: $(find public -type f | wc -l)"
+      run: npx hexo clean && npx hexo generate
 
     - name: Install CloudBase CLI
       run: npm install -g @cloudbase/cli
 
     - name: Login CloudBase CLI
-      run: tcb login --apiKeyId ${{ secrets.TCB_SECRET_ID }} --apiKey ${{ secrets.TCB_SECRET_KEY }}
+      run: tcb login --apiKeyId ${{ secrets.SECRET_ID }} --apiKey ${{ secrets.SECRET_KEY }}
 
     - name: Deploy to CloudBase Static Hosting
-      run: tcb hosting deploy public / -e ${{ secrets.TCB_ENV_ID }}
+      run: tcb hosting deploy public / -e ${{ secrets.ENV_ID }}

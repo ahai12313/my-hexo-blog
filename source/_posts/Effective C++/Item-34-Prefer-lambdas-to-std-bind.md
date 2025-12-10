@@ -1,5 +1,5 @@
 ---
-title: ' Item 34: Prefer lambdas to std::bind'
+title: 'Item 34: Prefer lambdas to std::bind'
 categories: Effective C++
 date: 2025-12-09 21:03:00
 tags:
